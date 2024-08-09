@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkpidginmq_website=self.webpackChunkpidginmq_website||[]).push([[1903],{1912:e=>{e.exports=JSON.parse('{"blogBasePath":"/pidginmq-website/blog","blogTitle":"Blog"}')}}]);
