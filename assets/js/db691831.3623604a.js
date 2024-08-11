@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkpidginmq_website=self.webpackChunkpidginmq_website||[]).push([[825],{8925:e=>{e.exports=JSON.parse('{"metadata":{"permalink":"/pidginmq-website/blog","page":1,"postsPerPage":10,"totalPages":1,"totalCount":4,"blogDescription":"Blog","blogTitle":"Blog"}}')}}]);
