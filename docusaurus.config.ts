@@ -1,10 +1,11 @@
 import { themes as prismThemes } from "prism-react-renderer";
 import type { Config } from "@docusaurus/types";
 import type * as Preset from "@docusaurus/preset-classic";
+import tailwindPlugin from "./plugins/tailwind-config.cjs";
 
 const config: Config = {
   title: "PidginMQ",
-  tagline: "Scheduled job and job queueing for PostgreSQL",
+  tagline: "Job queuing and task scheduling library for Node.js and JavaScript, built on PostgreSQL",
   favicon: "img/favicon.ico",
 
   // Set the production url of your site here
@@ -59,14 +60,14 @@ const config: Config = {
       title: "PidginMQ",
       logo: {
         alt: "PidginMQ",
-        src: "img/logo.svg",
+        src: "img/pidginmq.png",
       },
       items: [
         {
           type: "docSidebar",
           sidebarId: "tutorialSidebar",
           position: "left",
-          label: "Tutorial",
+          label: "Docs",
         },
         { to: "/blog", label: "Blog", position: "left" },
         {
@@ -83,7 +84,7 @@ const config: Config = {
           title: "Docs",
           items: [
             {
-              label: "Tutorial",
+              label: "Introduction",
               to: "/docs/intro",
             },
           ],
@@ -93,15 +94,7 @@ const config: Config = {
           items: [
             {
               label: "Stack Overflow",
-              href: "https://stackoverflow.com/questions/tagged/docusaurus",
-            },
-            {
-              label: "Discord",
-              href: "https://discordapp.com/invite/docusaurus",
-            },
-            {
-              label: "Twitter",
-              href: "https://twitter.com/docusaurus",
+              href: "https://stackoverflow.com/questions/tagged/pidginmq",
             },
           ],
         },
@@ -126,6 +119,7 @@ const config: Config = {
       darkTheme: prismThemes.dracula,
     },
   } satisfies Preset.ThemeConfig,
+  plugins: [tailwindPlugin],
 };
 
 export default config;
