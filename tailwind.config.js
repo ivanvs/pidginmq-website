@@ -1,4 +1,4 @@
-const { fontFamily } = require("tailwindcss/defaultTheme");
+import daisyui from "daisyui";
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -8,22 +8,9 @@ module.exports = {
   },
   darkMode: ["class", '[data-theme="dark"]'],
   content: ["./src/**/*.{jsx,tsx,html}"],
-  theme: {
-    extend: {
-      fontFamily: {
-        sans: ['"Inter"', ...fontFamily.sans],
-        jakarta: ['"Plus Jakarta Sans"', ...fontFamily.sans],
-        mono: ['"Fira Code"', ...fontFamily.mono],
-      },
-      borderRadius: {
-        sm: "4px",
-      },
-      screens: {
-        sm: "0px",
-        lg: "997px",
-      },
-      colors: {},
-    },
+  theme: {},
+  plugins: [daisyui],
+  daisyui: {
+    themes: ["lemonade", "dark"],
   },
-  plugins: [],
 };

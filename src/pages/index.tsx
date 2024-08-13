@@ -1,26 +1,26 @@
-import clsx from "clsx";
 import Link from "@docusaurus/Link";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
 import HomepageFeatures from "@site/src/components/HomepageFeatures";
-import Heading from "@theme/Heading";
-
-import styles from "./index.module.css";
 
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
   return (
-    <header className={clsx("hero hero--primary", styles.heroBanner)}>
-      <div className="container">
-        <Heading as="h1" className="hero__title">
-          {siteConfig.title}
-        </Heading>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
-        <div className={styles.buttons}>
-          <Link className="button button--secondary button--lg" to="/docs/intro">
+    <header className="hero bg-base-200 min-h-fit">
+      <div className="hero-content flex-col lg:flex-row">
+        <div>
+          <h1 className="text-5xl font-bold">{siteConfig.title}</h1>
+          <p className="py-6 text-lg">
+            <span className="font-bold">Job queuing</span> and <span className="font-bold">task scheduling</span> library <br /> for{" "}
+            <span className="font-bold">Node.js</span> and <span className="font-bold">JavaScript </span> <br />
+            built on <span className="font-bold">PostgreSQL</span>
+          </p>
+          <Link className="btn btn-primary" to="/docs/intro">
             Get Started
           </Link>
         </div>
+
+        <img src="/img/pidginmq.png" className="max-w-sm rounded-lg" />
       </div>
     </header>
   );
