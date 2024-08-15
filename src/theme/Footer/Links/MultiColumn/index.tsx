@@ -31,10 +31,12 @@ function Column({ column }: { column: ColumnType }) {
 
 export default function FooterLinksMultiColumn({ columns }: Props): JSX.Element {
   return (
-    <div className="container mx-auto flex flex-col md:flex-row justify-between">
-      {columns.map((column, i) => (
-        <Column key={i} column={column} />
-      ))}
+    <div className="container mx-auto">
+      <div className="flex flex-col md:flex-row justify-between min-w-full">
+        {columns.map((column, i) => (
+          <Column key={i} column={column} />
+        ))}
+      </div>
     </div>
   );
 }

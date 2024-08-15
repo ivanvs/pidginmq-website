@@ -1,6 +1,4 @@
-import clsx from "clsx";
 import Heading from "@theme/Heading";
-import styles from "./styles.module.css";
 import { FaRegClock } from "react-icons/fa";
 import { FaStopwatch20 } from "react-icons/fa";
 import { FaRedoAlt } from "react-icons/fa";
@@ -64,7 +62,7 @@ const FeatureList: FeatureItem[] = [
 
 function Feature({ title, icon, description }: FeatureItem) {
   return (
-    <div className="flex-col basis-1/3 py-4">
+    <div className="flex-col md:basis-1/3 py-4">
       <div className="text--center">{icon}</div>
       <div className="text--center padding-horiz--md">
         <Heading as="h3">{title}</Heading>
@@ -76,7 +74,7 @@ function Feature({ title, icon, description }: FeatureItem) {
 
 export default function HomepageFeatures(): JSX.Element {
   return (
-    <section className={styles.features}>
+    <section>
       <div className="container">
         <div className="flex flex-row flex-wrap">
           {FeatureList.map((props, idx) => (
