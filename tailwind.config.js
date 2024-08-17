@@ -1,4 +1,5 @@
 import daisyui from "daisyui";
+import { lemonade, dim } from "daisyui/src/theming/themes";
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -11,6 +12,17 @@ module.exports = {
   theme: {},
   plugins: [daisyui],
   daisyui: {
-    themes: ["lemonade", "dark"],
+    themes: [
+      {
+        light: {
+          ...lemonade,
+        },
+      },
+      {
+        dark: {
+          ...dim,
+        },
+      },
+    ],
   },
 };
