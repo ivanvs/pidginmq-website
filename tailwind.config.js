@@ -1,5 +1,5 @@
 import daisyui from "daisyui";
-import { lemonade, dim } from "daisyui/src/theming/themes";
+import typography from "@tailwindcss/typography";
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -8,21 +8,13 @@ module.exports = {
     container: false,
   },
   darkMode: ["class", '[data-theme="dark"]'],
-  content: ["./src/**/*.{jsx,tsx,html}"],
-  theme: {},
-  plugins: [daisyui],
+  content: ["./src/**/*.{js,jsx,ts,tsx,md,mdx}", "./docs/**/*.{md,mdx}"],
+  theme: {
+    extend: {},
+  },
+  plugins: [typography, daisyui],
   daisyui: {
-    themes: [
-      {
-        light: {
-          ...lemonade,
-        },
-      },
-      {
-        dark: {
-          ...dim,
-        },
-      },
-    ],
+    themes: ["lemonade", "dark"],
+    darkTheme: false,
   },
 };
