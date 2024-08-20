@@ -4,44 +4,21 @@ sidebar_position: 1
 
 # Introdction
 
-Let's discover **Docusaurus in less than 5 minutes**.
+PidginMQ is joq queuing library which uses PostgreSQL to store jobs and execute them on Node.js. The library allows you to process jobs in background with minimal need for configuration.
 
-## Getting Started
+Many companies and startups rely on DB-based job queue systems like this in production, processing millions of jobs daily. If it's working well for them, it will likely meet your needs too.
 
-Get started by **creating a new site**.
+PidginMQ use the SKIP LOCKED feature, designed specifically for message queues, to address record locking issues in relational databases. This ensures exactly-once delivery and guarantees atomic commits for safe and reliable asynchronous job processing.
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+## Requirements
 
-### What you'll need
+The current version of PidginMQ requires:
 
-- [Node.js](https://nodejs.org/en/download/) version 18.0 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
+- Node.js 18+
+- PostgreSQL 11+
 
-## Generate a new site
+## Installation
 
-Generate a new Docusaurus site using the **classic template**.
-
-The classic template will automatically be added to your project after you run the command:
-
-```bash
-npm init docusaurus@latest my-website classic
+```sh npm2yarn
+npm install pidginmq
 ```
-
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
-
-The command also installs all necessary dependencies you need to run Docusaurus.
-
-## Start your site
-
-Run the development server:
-
-```bash
-cd my-website
-npm run start
-```
-
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
-
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
-
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.

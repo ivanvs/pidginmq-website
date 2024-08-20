@@ -53,7 +53,7 @@ const FeatureList: FeatureItem[] = [
     icon: <GiSettingsKnobs className="h-24 w-24" />,
     description: (
       <>
-        assign different priority levels to tasks, ensuring that critical jobs are processed before less important ones, optimizing resource allocation and
+        Assign different priority levels to tasks, ensuring that critical jobs are processed before less important ones, optimizing resource allocation and
         improving system efficiency..
       </>
     ),
