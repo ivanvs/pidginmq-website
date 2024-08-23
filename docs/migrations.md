@@ -2,7 +2,7 @@
 sidebar_position: 4
 ---
 
-# Migration
+# Migrations
 
 PidginMQ needs database schema to setup in appropriate manner. PidginMQ provides command line tool which can help user to manage database schema for PostgreSQL.
 
