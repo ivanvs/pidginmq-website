@@ -20,18 +20,21 @@ Currently jobs in PidginMQ have 7 possible states:
 stateDiagram-v2
     [*] --> available : Insert a job
     available --> running
+    available --> cancelled : Cancel
 
     scheduled --> available
+    scheduled --> cancelled : Cancel
     running --> scheduled : Snoozed
     running --> completed
     running --> available : Snoozed
-    running --> cancelled : Cancelled
+    running --> cancelled : Cancel
     running --> cancelled : Max attempts reached
     running --> available : Execution error
     running --> retryable : Execution error
     running --> discarded : Max attempts reached
 
     retryable --> available
+    retryable --> cancelled : Cancel
 
     cancelled --> [*] : Delete a job
     completed --> [*] : Delete a job

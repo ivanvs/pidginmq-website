@@ -2,4 +2,4 @@
 sidebar_position: 8
 ---
 
-# Backoff
+# Backoff Strategy
