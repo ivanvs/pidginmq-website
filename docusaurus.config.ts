@@ -61,7 +61,7 @@ const config: Config = {
       defaultMode: "light",
     },
     // Replace with your project's social card
-    image: "img/docusaurus-social-card.jpg",
+    image: "img/pidginmq-social-card.jpg",
     navbar: {
       title: "PidginMQ",
       logo: {
