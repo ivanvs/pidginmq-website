@@ -56,6 +56,7 @@ const config: Config = {
   ],
 
   themeConfig: {
+    metadata: [{ name: "keywords", content: "job-scheduler, postgresql, job-queue, worker-queue, postgre-queue, pidgin-queue, pidginmq, pidginmq-queue" }],
     colorMode: {
       respectPrefersColorScheme: false,
       defaultMode: "light",
