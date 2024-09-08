@@ -6,13 +6,7 @@ sidebar_position: 3
 
 When creating PidginMQ client there are multiple options that can be configured. Here is a breakdown of options that can be configured:
 
-- **dbConfig** - configuration needed for creating connection to PostgreSQL
-  - **host** - PostgreSQL IP address[s] or domain name[s]
-  - **port** - PostgreSQL server port
-  - **user** - Username of databse user
-  - **password** - Password of database user
-  - **database** - Database name
-  - **ssl** - Is SSL enalled or not
+- **dbUri** - Database connection URI, detailed description can be found [here](https://www.postgresql.org/docs/current/libpq-connect.html#LIBPQ-CONNSTRING-URIS)
 - **cancelledJobRetentionPeriod** - how long cancelled jobs are retained before removal - default 24 hours
 - **completedJobRetentionPeriod** - how long completed jobs are retained before removal - default 24 hours
 - **discardedJobRetentionPeriod** - how long discarded jobs are retained before removal - default 24 hours

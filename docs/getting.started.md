@@ -16,14 +16,7 @@ queues.set('email', { maxWorkers: 1 });
 const options = {
     workers: new Workers(),
     queues,
-    dbConfig: {
-    host: 'localhost',
-    port: 5432,
-    user: 'pidginmq',
-    password: 'Password1',
-    database: 'pidginmq',
-    ssl: false,
-    },
+    dbUri: 'postgresql://user:secret@localhost:5432/pidginmq'
 };
 client = new Client(options);
 await client.start();

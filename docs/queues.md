@@ -4,11 +4,11 @@ sidebar_position: 7
 
 # Queues
 
-PidginMQ can be configured to work with multiple queues, all of which are stored in a single database table. However, only the jobs from the queues that PidginMQ is specifically configured to process will be executed.
+PidginMQ can be set up to handle multiple queues, all of which are stored in a single database table. However, only the jobs from the queues that PidginMQ is specifically set to process will be carried out.
 
-A queue can be configured either during the creation of the PidginMQ client or later using the client's `addQueue` method.
+A queue can be configured during the creation of the PidginMQ client or later using the client's `addQueue` method.
 
-Example with constructor:
+For example, during the creation of the PidginMQ client:
 
 ```js
 const queues = new Map<string, QueueConfig>();
@@ -38,7 +38,7 @@ client.addQueue("email", { maxWorkers: 1 });
 
 ## Pause Queue
 
-PidginMQ can pause processing jobs for specific queue without stopping a client.
+PidginMQ can pause processing jobs for specific queues without stopping a client.
 
 Method for pausing queue processing is `pauseQueue`:
 
@@ -48,7 +48,7 @@ const pasuedQueue = await client.pauseQueue("emial");
 
 ## Resume Queue
 
-When queue is paused, processing can be restored by calling `resumeQueue` method:
+When a queue is paused, processing can be restored by calling `resumeQueue` method:
 
 ```js
 const resumedQueue = await client.resumeQueue("email");
