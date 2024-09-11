@@ -4,11 +4,11 @@ sidebar_position: 1
 
 # Introdction
 
-PidginMQ is joq queuing library which uses PostgreSQL to store jobs and execute them on Node.js. The library allows you to process jobs in background with minimal need for configuration.
+PidginMQ is a job queuing library that leverages PostgreSQL to store and execute jobs within Node.js. This library facilitates job processing in the background with minimal configuration.
 
-Many companies and startups rely on DB-based job queue systems like this in production, processing millions of jobs daily. If it's working well for them, it will likely meet your needs too.
+Numerous enterprises and startups rely on database-based job queue systems similar to this in their production environments, handling millions of jobs daily. If such systems are performing effectively for them, they are likely to adequately fulfill your requirements as well.
 
-PidginMQ use the SKIP LOCKED feature, designed specifically for message queues, to address record locking issues in relational databases. This ensures exactly-once delivery and guarantees atomic commits for safe and reliable asynchronous job processing.
+PidginMQ makes use of the SKIP LOCKED feature, purposefully engineered for message queues, to address record-locking issues in relational databases. This feature ensures exactly-once delivery and provides guarantees for atomic commits, thereby establishing a foundation for secure and dependable asynchronous job processing.
 
 ## Requirements
 

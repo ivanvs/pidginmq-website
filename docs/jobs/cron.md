@@ -4,17 +4,17 @@ sidebar_position: 3
 
 # Repetable Job
 
-If you need to execute a job regularly based on a cron schedule, you can use the scheduleJob method.
+If you need to schedule a job to run regularly based on a cron schedule, you can use the `scheduleJob` method.
 
-Scheduled job has all configuration like regular job with addition of `repeat` property that contains `limit` and `cron`.
+A scheduled job has all the configurations of a regular job, with the addition of the repeat property that contains `limit` and `cron`.
 
-- **limit** - how much times job should be executed
-- **cron** - [cron expression](https://en.wikipedia.org/wiki/Cron) that is used to calculate when job should be executed next time
+- **limit** - how many times a job should be executed.
+- **cron** - [cron expression](https://en.wikipedia.org/wiki/Cron) that is used to calculate when a job should be executed next time.
 
-When job is schedule, two things will happen:
+When a job is scheduled, two things will happen:
 
-- job that should execute action will be created
-- special job of queue will be created: `__pidginmq_scheduler` that will created next job for execution
+- a job that should execute the action will be created,
+- special job of queue will be created: `__pidginmq_scheduler` that will create next job for execution.
 
 ## Example
 

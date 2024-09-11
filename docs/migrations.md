@@ -4,17 +4,17 @@ sidebar_position: 4
 
 # Migrations
 
-PidginMQ needs database schema to setup in appropriate manner. PidginMQ provides command line tool which can help user to manage database schema for PostgreSQL.
+PidginMQ needs the database schema to be set up appropriately. It provides a command-line tool that can help users manage the database schema for PostgreSQL.
 
 When you install the library, the CLI tool is installed automatically.
 
-CLI tool containse 3 commands:
+CLI tool contains 3 commands:
 
-    * `up` - running next migration
-    * `down` - will undo last migration
+    * `up` - running next migration.
+    * `down` - will undo last migration.
     * `current` - return current migration version
 
-For all 3 commands we need to supply [database connection url](https://www.postgresql.org/docs/current/libpq-connect.html#LIBPQ-CONNSTRING-URIS).
+For all 3 commands we need to supply [database connection URI](https://www.postgresql.org/docs/current/libpq-connect.html#LIBPQ-CONNSTRING-URIS).
 
 CLI tool is using [knex.js library](https://knexjs.org/guide/migrations.html) for working with database migrations.
 

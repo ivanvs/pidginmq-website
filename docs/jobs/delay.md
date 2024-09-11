@@ -4,11 +4,11 @@ sidebar_position: 5
 
 # Delayed Job
 
-Delayed jobs are jobs that are not processed immediately. Instead, they are processed after a specified amount of time has passed, at which point they are handled like regular jobs.
+Delayed jobs are not processed immediately but are handled after a specified amount of time has passed. Once processed, they are executed like regular jobs.
 
-To delay a job in PidginMQ, you can use the `scheduleAt` property, which is of type Date. This property allows you to specify the exact time when the job should be executed.
+In PidginMQ, to delay a job, you can utilize the `scheduleAt` property, which is of type `Date`. This property allows you to specify the exact time when the job should be executed.
 
-Please note that PidginMQ cannot guarantee that a job will be executed at the exact scheduled time, as this depends on various factors, such as the worker's current load and availability.
+It's important to note that PidginMQ cannot guarantee that a job will be executed at the exact scheduled time, as this depends on various factors such as the worker's current load and availability.
 
 ## Example
 

@@ -8,7 +8,7 @@ In this section we will cover minimal examples of operation that are often used 
 
 ## Starting Client
 
-PidginMQ client provides interface for common interactions with queus and jobs. A client is created with database pool in order to improve performance. Here is a client working with one queue:
+PidginMQ client provides an interface for common interactions with queues and jobs. A client is created with a database pool to improve performance. Here is a client working with one queue:
 
 ```js
 const queues = new Map<string, QueueConfig>();
@@ -25,7 +25,7 @@ await client.start();
 
 ## Register Worker
 
-Jobs are uniquely indentified by their `kind` string. Worker can be registered on star of client or when client is already started.
+Jobs are uniquely identified by their `kind` string. A worker can be registered at the start of a client or when the client has already started.
 
 ```js
 client.addWorker("welcome-mail", async () => {
@@ -36,7 +36,7 @@ client.addWorker("welcome-mail", async () => {
 
 ## Add job
 
-When we have client configured and started, worker registered, now we need to add job to queue.
+When the client is configured and started, and the worker is registered, we need to add a job to the queue.
 
 ```js
 await client.addJob({
@@ -47,7 +47,7 @@ await client.addJob({
 
 ## Stopping Client
 
-The client should be stopped on program shutdown. This will ensure that leader for processing jobs is release. Other client can continue with processing jobs if there is any
+The client should be stopped on program shutdown. This will ensure that the leader for processing jobs is released. Other clients can continue processing jobs if there are any.
 
 ```js
 await client.stop();
